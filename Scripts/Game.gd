@@ -38,18 +38,18 @@ func _input(event):
 			print ("Error changing scene to Menu")
 
 
-func _on_Conductor_measure(position):
-	if position == 1:
+func _on_Conductor_measure(_position):
+	if _position == 1:
 		_spawn_notes(spawn_1_beat)
-	elif position == 2:
+	elif _position == 2:
 		_spawn_notes(spawn_2_beat)
-	elif position == 3:
+	elif _position == 3:
 		_spawn_notes(spawn_3_beat)
-	elif position == 4:
+	elif _position == 4:
 		_spawn_notes(spawn_4_beat)
 
-func _on_Conductor_beat(position):
-	song_position_in_beats = position
+func _on_Conductor_beat(_position):
+	song_position_in_beats = _position
 	if song_position_in_beats > 36:
 		spawn_1_beat = 1
 		spawn_2_beat = 1
@@ -119,15 +119,15 @@ func _on_Conductor_beat(position):
 
 func _spawn_notes(to_spawn):
 	if to_spawn > 0:
-		lane = randi() % 3
-		instance = note.instance()
+		lane = randi() % 5
+		instance = note.instantiate()
 		instance.initialize(lane)
 		add_child(instance)
 	if to_spawn > 1:
 		while rand == lane:
-			rand = randi() % 3
+			rand = randi() % 5
 		lane = rand
-		instance = note.instance()
+		instance = note.instantiate()
 		instance.initialize(lane)
 		add_child(instance)
 		
@@ -162,11 +162,3 @@ func increment_score(by):
 func reset_combo():
 	combo = 0
 	$Combo.text = ""
-
-
-func _on_conductor_beat(position):
-	pass # Replace with function body.
-
-
-func _on_conductor_measure(position):
-	pass # Replace with function body.

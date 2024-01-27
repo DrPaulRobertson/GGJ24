@@ -1,14 +1,25 @@
-[gd_scene load_steps=5 format=3 uid="uid://2hdkms8vwr70"]
+[gd_scene load_steps=7 format=3 uid="uid://2hdkms8vwr70"]
 
 [ext_resource type="Script" path="res://Scripts/Game.gd" id="1_6edh2"]
 [ext_resource type="PackedScene" uid="uid://g32jg44fkyir" path="res://Scenes/Conductor_node.tscn" id="2_abomd"]
+[ext_resource type="PackedScene" uid="uid://2rbl5klangyo" path="res://Scenes/main.tscn" id="2_rnwo7"]
 [ext_resource type="Texture2D" uid="uid://i81o0g2787sp" path="res://Textures/road.png" id="3_xyb83"]
 [ext_resource type="Texture2D" uid="uid://clart6aoauanf" path="res://Textures/hit_area.png" id="4_3iqqb"]
+[ext_resource type="AudioStream" uid="uid://jmvluhotii4s" path="res://Sounds/Head-Shoulders-Knees-And-Toes.ogg" id="5_7kck3"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_6edh2")
 
-[node name="Conductor" parent="." instance=ExtResource("2_abomd")]
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+offset_right = 712.0
+offset_bottom = 641.0
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(1147, 637)
+render_target_update_mode = 4
+
+[node name="Node3D" parent="SubViewportContainer/SubViewport" instance=ExtResource("2_rnwo7")]
 
 [node name="Road" type="Sprite2D" parent="."]
 position = Vector2(650, 150)
@@ -52,5 +63,9 @@ offset_top = 81.0
 offset_right = 162.0
 offset_bottom = 121.0
 
-[connection signal="beat" from="Conductor" to="." method="_on_conductor_beat"]
-[connection signal="measure" from="Conductor" to="." method="_on_conductor_measure"]
+[node name="Conductor" parent="." instance=ExtResource("2_abomd")]
+stream = ExtResource("5_7kck3")
+bpm = 120
+
+[connection signal="beat" from="Conductor" to="." method="_on_Conductor_beat"]
+[connection signal="measure" from="Conductor" to="." method="_on_Conductor_measure"]

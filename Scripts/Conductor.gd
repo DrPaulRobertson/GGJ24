@@ -53,11 +53,11 @@ func closest_beat(nth):
 	return Vector2(closest, time_off_beat)
 
 
-func play_from_beat(beat, offset):
+func play_from_beat(_beat, offset):
 	play()
-	seek(beat * sec_per_beat)
+	seek(_beat * sec_per_beat)
 	beats_before_start = offset
-	current_measure = beat % current_measure
+	current_measure = _beat % current_measure
 
 
 func _on_StartTimer_timeout():
@@ -72,7 +72,3 @@ func _on_StartTimer_timeout():
 		play()
 		$StartTimer.stop()
 	_report_beat()
-
-
-func _on_beat(position):
-	pass # Replace with function body.

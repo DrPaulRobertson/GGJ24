@@ -34,6 +34,9 @@ offset_left = 976.0
 offset_top = 10.0
 offset_right = 1126.0
 offset_bottom = 98.0
+max_value = 1.0
+step = 0.05
+value = 0.75
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(619, 512)
@@ -46,3 +49,5 @@ offset_right = 839.0
 offset_bottom = 539.0
 text = "Press           to start"
 label_settings = SubResource("LabelSettings_6sm76")
+
+[connection signal="value_changed" from="HSlider" to="." method="_on_HSlider_value_changed"]

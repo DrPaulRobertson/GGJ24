@@ -1,12 +1,13 @@
 extends Area2D
 
-const TARGET_Y = 164
-const SPAWN_Y = -16
-const DIST_TO_TARGET = TARGET_Y - SPAWN_Y
+const TARGET_X = 1055#164
+const SPAWN_X = -16
+const DIST_TO_TARGET = TARGET_X - SPAWN_X
 
-const LEFT_LANE_SPAWN = Vector2(120, SPAWN_Y)
-const CENTRE_LANE_SPAWN = Vector2(160, SPAWN_Y)
-const RIGHT_LANE_SPAWN = Vector2(200, SPAWN_Y)
+const TOP_LANE_SPAWN = Vector2(SPAWN_X, 200)
+const SECOND_LANE_SPAWN = Vector2(SPAWN_X, 280)
+const THIRD_LANE_SPAWN = Vector2(SPAWN_X, 370)
+const BOTTOM_LANE_SPAWN = Vector2(SPAWN_X, 465)
 
 var speed = 0
 var hit = false
@@ -18,24 +19,30 @@ func _ready():
 
 func _physics_process(delta):
 	if !hit:
-		position.y += speed * delta
-		if position.y > 200:
+		position.x += speed * delta
+		if position.x > 1100:
 			queue_free()
 			get_parent().reset_combo()
 	else:
-		$Node2D.position.y -= speed * delta
+		$Node2D.position.x += speed * delta
 
 
 func initialize(lane):
 	if lane == 0:
-		$AnimatedSprite.frame = 0
-		position = LEFT_LANE_SPAWN
+		$AnimatedSprite.frame = 4
+		position = TOP_LANE_SPAWN
 	elif lane == 1:
-		$AnimatedSprite.frame = 1
-		position = CENTRE_LANE_SPAWN
-	elif lane == 2:
 		$AnimatedSprite.frame = 2
-		position = RIGHT_LANE_SPAWN
+		position = SECOND_LANE_SPAWN
+	elif lane == 2:
+		$AnimatedSprite.frame = 3
+		position = SECOND_LANE_SPAWN
+	elif lane == 3:
+		$AnimatedSprite.frame = 1
+		position = THIRD_LANE_SPAWN
+	elif lane == 4:
+		$AnimatedSprite.frame = 0
+		position = BOTTOM_LANE_SPAWN
 	else:
 		printerr("Invalid lane set for note: " + str(lane))
 		return

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://c3al4vofown1v"]
+[gd_scene load_steps=13 format=3 uid="uid://c3al4vofown1v"]
 
 [ext_resource type="Script" path="res://Scripts/Note.gd" id="1_c3fyj"]
 [ext_resource type="Texture2D" uid="uid://cmw7ei6sp3jet" path="res://Textures/circle.png" id="2_x86op"]
@@ -47,10 +47,13 @@ point_count = 2
 offsets = PackedFloat32Array(0.527273, 1)
 colors = PackedColorArray(1, 0, 1, 1, 0.838723, 1.16476e-05, 0.553025, 0.25098)
 
+[sub_resource type="LabelSettings" id="LabelSettings_ihecc"]
+font_size = 45
+
 [node name="Note" type="Area2D"]
 script = ExtResource("1_c3fyj")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_dluk3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -82,5 +85,10 @@ color_ramp = SubResource("Gradient_dith4")
 [node name="Node2D" type="Node2D" parent="."]
 
 [node name="Label" type="Label" parent="Node2D"]
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = -20.0
+offset_top = -11.0
+offset_right = 20.0
+offset_bottom = 12.0
+label_settings = SubResource("LabelSettings_ihecc")
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
