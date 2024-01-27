@@ -1,13 +1,13 @@
 [gd_scene load_steps=7 format=3 uid="uid://dgga7l6i0plij"]
 
-[ext_resource type="Texture2D" uid="uid://dod2lks0cj2ja" path="res://Textures/background_colour.png" id="1_sk3nk"]
+[ext_resource type="Texture2D" uid="uid://ledt4yxo7bo6" path="res://Textures/trans.png" id="1_45oru"]
 [ext_resource type="Script" path="res://Scripts/ArrowButton.gd" id="6_msu05"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_52r8m"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_sk3nk")
+"texture": ExtResource("1_45oru")
 }],
 "loop": true,
 "name": &"default",

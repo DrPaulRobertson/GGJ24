@@ -4,7 +4,7 @@ const TARGET_X = 1055#164
 const SPAWN_X = -16
 const DIST_TO_TARGET = TARGET_X - SPAWN_X
 
-const TOP_LANE_SPAWN = Vector2(SPAWN_X, 200)
+const TOP_LANE_SPAWN = Vector2(SPAWN_X, 190)
 const SECOND_LANE_SPAWN = Vector2(SPAWN_X, 280)
 const THIRD_LANE_SPAWN = Vector2(SPAWN_X, 370)
 const BOTTOM_LANE_SPAWN = Vector2(SPAWN_X, 465)
@@ -29,16 +29,16 @@ func _physics_process(delta):
 
 func initialize(lane):
 	if lane == 0:
-		$AnimatedSprite.frame = 4
+		$AnimatedSprite.frame = 1
 		position = TOP_LANE_SPAWN
 	elif lane == 1:
 		$AnimatedSprite.frame = 2
 		position = SECOND_LANE_SPAWN
 	elif lane == 2:
-		$AnimatedSprite.frame = 3
+		$AnimatedSprite.frame = 4
 		position = SECOND_LANE_SPAWN
 	elif lane == 3:
-		$AnimatedSprite.frame = 1
+		$AnimatedSprite.frame = 3
 		position = THIRD_LANE_SPAWN
 	elif lane == 4:
 		$AnimatedSprite.frame = 0

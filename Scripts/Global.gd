@@ -12,29 +12,29 @@ var grade = "NA"
 
 func set_score(new):
 	score = new
-	if score > 250000:
+	if score > 2500:#00:
 		grade = "A+"
-	elif score > 200000:
+	elif score > 2000:#00:
 		grade = "A"
-	elif score > 150000:
+	elif score > 1500:#00:
 		grade = "A-"
-	elif score > 130000:
+	elif score > 1300:#00:
 		grade = "B+"
-	elif score > 115000:
+	elif score > 1150:#00:
 		grade = "B"
-	elif score > 100000:
+	elif score > 1000:#00:
 		grade = "B-"
-	elif score > 85000:
+	elif score > 850:#00:
 		grade = "C+"
-	elif score > 70000:
+	elif score > 700:#00:
 		grade = "C"
-	elif score > 55000:
+	elif score > 550:#00:
 		grade = "C-"
-	elif score > 40000:
+	elif score > 400:#00:
 		grade = "D+"
-	elif score > 30000:
+	elif score > 300:#00:
 		grade = "D"
-	elif score > 20000:
+	elif score > 200:#00:
 		grade = "D-"
 	else:
 		grade = "F"

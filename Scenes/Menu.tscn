@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://Scripts/Menu.gd" id="1_0t8nb"]
 [ext_resource type="Texture2D" uid="uid://hnq3qhbbxg1c" path="res://Textures/menu_background.png" id="2_cigrx"]
-[ext_resource type="Texture2D" uid="uid://cmw7ei6sp3jet" path="res://Textures/circle.png" id="2_pyaik"]
 [ext_resource type="Texture2D" uid="uid://dod2lks0cj2ja" path="res://Textures/background_colour.png" id="3_vlnc4"]
+[ext_resource type="Texture2D" uid="uid://ct0kbwfrwn5ja" path="res://Textures/circle_pink.png" id="4_52ou1"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_6sm76"]
 font_size = 45
@@ -39,8 +39,9 @@ step = 0.05
 value = 0.75
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(619, 512)
-texture = ExtResource("2_pyaik")
+position = Vector2(615.086, 508.875)
+scale = Vector2(0.632353, 0.632353)
+texture = ExtResource("4_52ou1")
 
 [node name="Label" type="Label" parent="."]
 offset_left = 430.0
