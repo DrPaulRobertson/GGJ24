@@ -82,3 +82,9 @@ texture = ExtResource("2_qefgc")
 [node name="up" type="Sprite2D" parent="."]
 position = Vector2(690, 408)
 texture = ExtResource("3_r8wja")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

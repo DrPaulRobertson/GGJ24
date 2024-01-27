@@ -31,6 +31,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qf1lp"]
+size = Vector2(82.5, 76.5)
 
 [sub_resource type="Curve" id="Curve_yet61"]
 min_value = -360.0
@@ -50,7 +51,7 @@ colors = PackedColorArray(1, 0, 1, 1, 0.838723, 1.16476e-05, 0.553025, 0.25098)
 [sub_resource type="LabelSettings" id="LabelSettings_ihecc"]
 font_size = 45
 
-[node name="Note" type="Area2D"]
+[node name="Note" type="Area2D" groups=["note"]]
 script = ExtResource("1_c3fyj")
 
 [node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://2hdkms8vwr70"]
+[gd_scene load_steps=8 format=3 uid="uid://2hdkms8vwr70"]
 
 [ext_resource type="Script" path="res://Scripts/Game.gd" id="1_6edh2"]
 [ext_resource type="PackedScene" uid="uid://g32jg44fkyir" path="res://Scenes/Conductor_node.tscn" id="2_abomd"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://i81o0g2787sp" path="res://Textures/road.png" id="3_xyb83"]
 [ext_resource type="Texture2D" uid="uid://clart6aoauanf" path="res://Textures/hit_area.png" id="4_3iqqb"]
 [ext_resource type="AudioStream" uid="uid://jmvluhotii4s" path="res://Sounds/Head-Shoulders-Knees-And-Toes.ogg" id="5_7kck3"]
+[ext_resource type="PackedScene" uid="uid://dgga7l6i0plij" path="res://Scenes/ArrowButton.tscn" id="7_yyoct"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_6edh2")
@@ -66,6 +67,36 @@ offset_bottom = 121.0
 [node name="Conductor" parent="." instance=ExtResource("2_abomd")]
 stream = ExtResource("5_7kck3")
 bpm = 120
+
+[node name="ArrowButtonUp" parent="." instance=ExtResource("7_yyoct")]
+position = Vector2(1056, 190)
+rotation = 1.5708
+scale = Vector2(0.686952, 0.686952)
+input = "Up"
+
+[node name="ArrowButtonCircle" parent="." instance=ExtResource("7_yyoct")]
+position = Vector2(1056, 464)
+rotation = 1.5708
+scale = Vector2(0.686952, 0.686952)
+input = "Circle"
+
+[node name="ArrowButtonDown" parent="." instance=ExtResource("7_yyoct")]
+position = Vector2(1057, 374)
+rotation = 1.5708
+scale = Vector2(0.686952, 0.686952)
+input = "Down"
+
+[node name="ArrowButtonRight" parent="." instance=ExtResource("7_yyoct")]
+position = Vector2(1057, 281)
+rotation = 1.5708
+scale = Vector2(0.686952, 0.686952)
+input = "Right"
+
+[node name="ArrowButtonLeft" parent="." instance=ExtResource("7_yyoct")]
+position = Vector2(1057, 280)
+rotation = 1.5708
+scale = Vector2(0.686952, 0.686952)
+input = "Left"
 
 [connection signal="beat" from="Conductor" to="." method="_on_Conductor_beat"]
 [connection signal="measure" from="Conductor" to="." method="_on_Conductor_measure"]
