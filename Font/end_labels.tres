@@ -1,5 +1,9 @@
-[gd_resource type="LabelSettings" format=3 uid="uid://cql7mn643wepi"]
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://cql7mn643wepi"]
+
+[ext_resource type="FontFile" uid="uid://c2b2upepojt64" path="res://Font/Morphelia.ttf" id="1_k3u6y"]
 
 [resource]
-font_size = 30
+font = ExtResource("1_k3u6y")
+font_size = 60
 font_color = Color(0.960784, 0.745098, 0.254902, 1)
+outline_size = 1

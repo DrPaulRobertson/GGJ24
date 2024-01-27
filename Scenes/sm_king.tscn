@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://74j6laii87fw"]
+[gd_scene load_steps=10 format=3 uid="uid://74j6laii87fw"]
 
 [ext_resource type="PackedScene" uid="uid://ealf4ul88084" path="res://Meshes/SM_King.glb" id="1_6mi6k"]
+[ext_resource type="Script" path="res://Scripts/sm_king.gd" id="2_u1bcd"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u76ip"]
 shading_mode = 0
@@ -31,6 +32,68 @@ shading_mode = 0
 albedo_color = Color(0.560784, 0.243137, 0, 1)
 
 [node name="SM_King2" instance=ExtResource("1_6mi6k")]
+script = ExtResource("2_u1bcd")
+
+[node name="Skeleton3D" parent="Armature" index="0"]
+bones/1/scale = Vector3(1, 1, 1)
+bones/2/rotation = Quaternion(0.352266, 2.23136e-07, 8.39869e-08, 0.9359)
+bones/4/scale = Vector3(0, 0, 0)
+bones/5/position = Vector3(-4.08215, -0.192423, -0.511934)
+bones/5/rotation = Quaternion(-2.68221e-07, 5.32907e-14, 1.35044e-07, 1)
+bones/9/rotation = Quaternion(-2.68221e-07, 5.32907e-14, 1.35044e-07, 1)
+bones/9/scale = Vector3(0, 0, 0)
+bones/10/rotation = Quaternion(-0.00663804, 0.0112064, -0.846209, 0.532691)
+bones/10/scale = Vector3(1, 1, 1)
+bones/12/rotation = Quaternion(0.0440118, -0.000847125, -0.134693, 0.989909)
+bones/12/scale = Vector3(1, 1, 1)
+bones/13/rotation = Quaternion(-0.0391932, 0.0043307, 0.0147685, 0.999113)
+bones/14/rotation = Quaternion(0.605131, -0.0900828, -0.13496, 0.779415)
+bones/14/scale = Vector3(1, 1, 1)
+bones/15/rotation = Quaternion(-0.109509, -0.0163776, -0.111614, 0.987564)
+bones/16/rotation = Quaternion(0.280282, -0.0292184, -0.181492, 0.942151)
+bones/17/rotation = Quaternion(-0.156771, -0.0323587, -0.102161, 0.981804)
+bones/17/scale = Vector3(1, 1, 1)
+bones/18/rotation = Quaternion(0.0117852, 0.00227997, -0.194708, 0.980788)
+bones/18/scale = Vector3(1, 1, 1)
+bones/19/rotation = Quaternion(0.106431, 0.0100766, -0.112207, 0.987917)
+bones/20/rotation = Quaternion(-0.104943, -0.0395781, -0.19491, 0.974387)
+bones/21/rotation = Quaternion(0.00974206, 0.00188294, -0.244508, 0.969596)
+bones/21/scale = Vector3(1, 1, 1)
+bones/23/rotation = Quaternion(0.131246, -0.020188, -0.137892, 0.981505)
+bones/23/scale = Vector3(1, 1, 1)
+bones/24/rotation = Quaternion(-0.0174675, -0.00829399, -0.189374, 0.981715)
+bones/25/rotation = Quaternion(-0.290063, 0.0619393, -0.181409, 0.937613)
+bones/25/scale = Vector3(1, 1, 1)
+bones/26/scale = Vector3(1, 1, 1)
+bones/27/rotation = Quaternion(0.0313751, 0.00906049, -0.216685, 0.975695)
+bones/27/scale = Vector3(1, 1, 1)
+bones/28/rotation = Quaternion(-0.00663804, -0.0112064, 0.846209, 0.532691)
+bones/28/scale = Vector3(1, 1, 1)
+bones/29/rotation = Quaternion(0.331313, 0.368323, 0.226222, 0.838686)
+bones/30/rotation = Quaternion(0.37226, 0.0891813, 0.798122, 0.465264)
+bones/30/scale = Vector3(1, 1, 1)
+bones/31/rotation = Quaternion(-0.0392424, -0.00451007, -0.0177656, 0.999062)
+bones/31/scale = Vector3(0.582722, 0.582722, 0.582722)
+bones/32/rotation = Quaternion(0.605131, 0.0900828, 0.13496, 0.779415)
+bones/32/scale = Vector3(1, 1, 1)
+bones/34/rotation = Quaternion(0.280282, 0.0292184, 0.181492, 0.942151)
+bones/35/rotation = Quaternion(-0.296729, 0.0581399, 0.109206, 0.946914)
+bones/35/scale = Vector3(1, 1, 1)
+bones/36/rotation = Quaternion(0.0117852, -0.00227997, 0.194708, 0.980788)
+bones/36/scale = Vector3(1, 1, 1)
+bones/37/rotation = Quaternion(0.106431, -0.0100766, 0.112207, 0.987917)
+bones/38/rotation = Quaternion(-0.104943, 0.0395781, 0.19491, 0.974387)
+bones/39/rotation = Quaternion(0.00974206, -0.00188294, 0.244508, 0.969596)
+bones/39/scale = Vector3(1, 1, 1)
+bones/41/rotation = Quaternion(0.174829, 0.0161735, 0.132823, 0.975465)
+bones/41/scale = Vector3(1, 1, 1)
+bones/42/rotation = Quaternion(-0.0174675, 0.00829399, 0.189374, 0.981715)
+bones/43/rotation = Quaternion(-0.290063, -0.0619393, 0.181409, 0.937613)
+bones/43/scale = Vector3(1, 1, 1)
+bones/44/rotation = Quaternion(0.321449, -0.00227309, 0.0228399, 0.946649)
+bones/44/scale = Vector3(1, 1, 1)
+bones/45/rotation = Quaternion(0.0313751, -0.00906049, 0.216685, 0.975695)
+bones/45/scale = Vector3(1, 1, 1)
 
 [node name="SM_King" parent="Armature/Skeleton3D" index="0"]
 surface_material_override/0 = SubResource("StandardMaterial3D_u76ip")

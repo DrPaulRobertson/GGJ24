@@ -151,8 +151,9 @@ func increment_score(by):
 	
 	score += by * combo
 	$Label.text = str(score)
+	Global.score = score
 	if combo > 0:
-		$Combo.text = str(combo) + " combo!"
+		$Combo.text = str(combo) + "x combo!"
 		if combo > max_combo:
 			max_combo = combo
 	else:

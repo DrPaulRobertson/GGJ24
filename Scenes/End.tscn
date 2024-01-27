@@ -9,53 +9,53 @@
 script = ExtResource("1_oj4yg")
 
 [node name="GradeLabel" type="Label" parent="."]
-offset_left = 180.0
-offset_top = 31.0
-offset_right = 453.0
-offset_bottom = 74.0
+offset_left = 201.0
+offset_top = 21.0
+offset_right = 474.0
+offset_bottom = 127.0
 text = "Grade: "
 label_settings = ExtResource("1_u8688")
 horizontal_alignment = 2
 
 [node name="GradeNumber" type="Label" parent="."]
-offset_left = 453.0
-offset_top = 34.0
-offset_right = 591.0
-offset_bottom = 78.0
+offset_left = 481.0
+offset_top = 24.0
+offset_right = 619.0
+offset_bottom = 130.0
 text = "0"
 label_settings = ExtResource("1_u8688")
 
 [node name="FinalScore" type="Label" parent="."]
-offset_left = 282.0
-offset_top = 82.0
-offset_right = 446.0
-offset_bottom = 136.0
+offset_left = 183.0
+offset_top = 91.0
+offset_right = 461.0
+offset_bottom = 197.0
 text = "Final Score:"
 label_settings = ExtResource("1_u8688")
 horizontal_alignment = 2
 
 [node name="ScoreNumber" type="Label" parent="."]
-offset_left = 457.0
-offset_top = 86.0
-offset_right = 551.0
-offset_bottom = 132.0
+offset_left = 484.0
+offset_top = 94.0
+offset_right = 578.0
+offset_bottom = 200.0
 text = "0"
 label_settings = ExtResource("1_u8688")
 
 [node name="MaxCombo" type="Label" parent="."]
-offset_left = 266.0
-offset_top = 133.0
-offset_right = 447.0
-offset_bottom = 208.0
+offset_left = 184.0
+offset_top = 168.0
+offset_right = 462.0
+offset_bottom = 274.0
 text = "Max Combo:"
 label_settings = ExtResource("1_u8688")
 horizontal_alignment = 2
 
 [node name="ComboNumber" type="Label" parent="."]
-offset_left = 460.0
-offset_top = 137.0
-offset_right = 615.0
-offset_bottom = 194.0
+offset_left = 488.0
+offset_top = 173.0
+offset_right = 643.0
+offset_bottom = 279.0
 text = "0"
 label_settings = ExtResource("1_u8688")
 
@@ -68,20 +68,20 @@ text = "Play again"
 label_settings = ExtResource("1_u8688")
 
 [node name="BackToMenu" type="Label" parent="."]
-offset_left = 587.0
-offset_top = 322.0
-offset_right = 734.0
-offset_bottom = 405.0
+offset_left = 682.0
+offset_top = 310.0
+offset_right = 981.0
+offset_bottom = 416.0
 text = "Back to menu"
 label_settings = ExtResource("1_u8688")
 
 [node name="circle" type="Sprite2D" parent="."]
-position = Vector2(335, 461)
+position = Vector2(389, 480)
 scale = Vector2(0.821267, 0.821267)
 texture = ExtResource("3_gnd3o")
 
 [node name="up" type="Sprite2D" parent="."]
-position = Vector2(688, 451)
+position = Vector2(840, 481)
 scale = Vector2(0.771493, 0.771493)
 texture = ExtResource("4_63kic")
 
