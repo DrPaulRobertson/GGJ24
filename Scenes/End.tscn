@@ -1,0 +1,84 @@
+[gd_scene load_steps=5 format=3 uid="uid://odns7t6x8sks"]
+
+[ext_resource type="Script" path="res://Scripts/End.gd" id="1_oj4yg"]
+[ext_resource type="LabelSettings" uid="uid://cql7mn643wepi" path="res://Font/end_labels.tres" id="1_u8688"]
+[ext_resource type="Texture2D" uid="uid://cmw7ei6sp3jet" path="res://Textures/circle.png" id="2_qefgc"]
+[ext_resource type="Texture2D" uid="uid://dybyibc0mogft" path="res://Textures/up.png" id="3_r8wja"]
+
+[node name="End" type="Node2D"]
+script = ExtResource("1_oj4yg")
+
+[node name="GradeLabel" type="Label" parent="."]
+offset_left = 180.0
+offset_top = 31.0
+offset_right = 453.0
+offset_bottom = 74.0
+text = "Grade: "
+label_settings = ExtResource("1_u8688")
+horizontal_alignment = 2
+
+[node name="GradeNumber" type="Label" parent="."]
+offset_left = 453.0
+offset_top = 34.0
+offset_right = 591.0
+offset_bottom = 78.0
+text = "0"
+label_settings = ExtResource("1_u8688")
+
+[node name="FinalScore" type="Label" parent="."]
+offset_left = 282.0
+offset_top = 82.0
+offset_right = 446.0
+offset_bottom = 136.0
+text = "Final Score:"
+label_settings = ExtResource("1_u8688")
+horizontal_alignment = 2
+
+[node name="ScoreNumber" type="Label" parent="."]
+offset_left = 457.0
+offset_top = 86.0
+offset_right = 551.0
+offset_bottom = 132.0
+text = "0"
+label_settings = ExtResource("1_u8688")
+
+[node name="MaxCombo" type="Label" parent="."]
+offset_left = 266.0
+offset_top = 133.0
+offset_right = 447.0
+offset_bottom = 208.0
+text = "Max Combo:"
+label_settings = ExtResource("1_u8688")
+horizontal_alignment = 2
+
+[node name="ComboNumber" type="Label" parent="."]
+offset_left = 460.0
+offset_top = 137.0
+offset_right = 615.0
+offset_bottom = 194.0
+text = "0"
+label_settings = ExtResource("1_u8688")
+
+[node name="PlayAgain" type="Label" parent="."]
+offset_left = 258.0
+offset_top = 315.0
+offset_right = 442.0
+offset_bottom = 382.0
+text = "Play again"
+label_settings = ExtResource("1_u8688")
+
+[node name="BackToMenu" type="Label" parent="."]
+offset_left = 587.0
+offset_top = 322.0
+offset_right = 734.0
+offset_bottom = 405.0
+text = "Back to menu"
+label_settings = ExtResource("1_u8688")
+
+[node name="circle" type="Sprite2D" parent="."]
+position = Vector2(340, 394)
+texture = ExtResource("2_qefgc")
+
+[node name="up" type="Sprite2D" parent="."]
+position = Vector2(690, 408)
+texture = ExtResource("3_r8wja")

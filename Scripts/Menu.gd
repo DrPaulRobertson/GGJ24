@@ -8,7 +8,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if Input.is_action_pressed("Circle"):
+	if Input.is_action_just_pressed("Circle"):
 		AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"), 
 								linear_to_db($HSlider.value))
 		if get_tree().change_scene_to_file("res://Scenes/Game.tscn") != OK:

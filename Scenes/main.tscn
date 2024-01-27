@@ -1,8 +1,16 @@
-[gd_scene format=3 uid="uid://2rbl5klangyo"]
+[gd_scene load_steps=2 format=3 uid="uid://2rbl5klangyo"]
+
+[ext_resource type="PackedScene" path="res://Scenes/sm_king_2.tscn" id="1_rancr"]
 
 [node name="Node3D" type="Node3D"]
 
 [node name="dude" type="CSGSphere3D" parent="."]
+visible = false
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.97214)
+
+[node name="SM_King2" parent="." instance=ExtResource("1_rancr")]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.865537, 0.0942647, 0.491894, -0.22034, 0.953647, 0.204957, -0.449773, -0.285781, 0.846188, 0, 0, 0)
