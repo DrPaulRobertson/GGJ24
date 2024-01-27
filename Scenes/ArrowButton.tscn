@@ -1,0 +1,87 @@
+[gd_scene load_steps=11 format=3 uid="uid://dgga7l6i0plij"]
+
+[ext_resource type="Texture2D" uid="uid://cmw7ei6sp3jet" path="res://Textures/circle.png" id="1_mmpp1"]
+[ext_resource type="Texture2D" uid="uid://tt2a0c1pixi4" path="res://Textures/down.png" id="2_4blgh"]
+[ext_resource type="Texture2D" uid="uid://sfs6o0uxm3dd" path="res://Textures/left.png" id="3_evcfh"]
+[ext_resource type="Texture2D" uid="uid://c11tv5128glh5" path="res://Textures/right.png" id="4_t51gw"]
+[ext_resource type="Texture2D" uid="uid://dybyibc0mogft" path="res://Textures/up.png" id="5_liki8"]
+[ext_resource type="Script" path="res://Scripts/ArrowButton.gd" id="6_msu05"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1h23y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_mmpp1")
+}],
+"loop": true,
+"name": &"circle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_4blgh")
+}],
+"loop": true,
+"name": &"down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_evcfh")
+}],
+"loop": true,
+"name": &"left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_t51gw")
+}],
+"loop": true,
+"name": &"right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_liki8")
+}],
+"loop": true,
+"name": &"up",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_drrbw"]
+size = Vector2(20, 12.675)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u6bag"]
+size = Vector2(20, 30.6)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sxqjp"]
+size = Vector2(20, 63.5)
+
+[node name="ArrowButton" type="AnimatedSprite2D"]
+scale = Vector2(10, 10)
+sprite_frames = SubResource("SpriteFrames_1h23y")
+animation = &"circle"
+script = ExtResource("6_msu05")
+
+[node name="PerfectArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PerfectArea"]
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_drrbw")
+
+[node name="GoodArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GoodArea"]
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_u6bag")
+
+[node name="OkayArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="OkayArea"]
+position = Vector2(0, -0.0499977)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_sxqjp")
+
+[node name="PushTimer" type="Timer" parent="."]

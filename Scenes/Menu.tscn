@@ -1,0 +1,48 @@
+[gd_scene load_steps=6 format=3 uid="uid://dbin07ov25h60"]
+
+[ext_resource type="Script" path="res://Scripts/Menu.gd" id="1_0t8nb"]
+[ext_resource type="Texture2D" uid="uid://hnq3qhbbxg1c" path="res://Textures/menu_background.png" id="2_cigrx"]
+[ext_resource type="Texture2D" uid="uid://cmw7ei6sp3jet" path="res://Textures/circle.png" id="2_pyaik"]
+[ext_resource type="Texture2D" uid="uid://dod2lks0cj2ja" path="res://Textures/background_colour.png" id="3_vlnc4"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6sm76"]
+font_size = 45
+font_color = Color(0, 0.831373, 0.835294, 1)
+outline_size = 5
+outline_color = Color(0.0431373, 0.0431373, 0.0431373, 1)
+
+[node name="Menu" type="Node2D"]
+script = ExtResource("1_0t8nb")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(620, 335)
+scale = Vector2(0.493274, 0.493274)
+texture = ExtResource("2_cigrx")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(1057.5, 55.5)
+scale = Vector2(1.83064, 0.524194)
+texture = ExtResource("3_vlnc4")
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(631.25, 508)
+scale = Vector2(3.59274, 0.790323)
+texture = ExtResource("3_vlnc4")
+
+[node name="HSlider" type="HSlider" parent="."]
+offset_left = 976.0
+offset_top = 10.0
+offset_right = 1126.0
+offset_bottom = 98.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(619, 512)
+texture = ExtResource("2_pyaik")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 430.0
+offset_top = 476.0
+offset_right = 839.0
+offset_bottom = 539.0
+text = "Press           to start"
+label_settings = SubResource("LabelSettings_6sm76")
