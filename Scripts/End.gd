@@ -12,6 +12,9 @@ func _ready():
 	#$OkayNumber.text = str(Global.okay)
 	#$MissedNumber.text = str(Global.missed)
 	$Timer.start()
+	if Global.use_keys:
+			$playkey.text = "D"
+			$menukey.text = "I"
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

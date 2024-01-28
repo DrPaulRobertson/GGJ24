@@ -1,9 +1,19 @@
-[gd_scene load_steps=5 format=3 uid="uid://odns7t6x8sks"]
+[gd_scene load_steps=7 format=3 uid="uid://odns7t6x8sks"]
 
 [ext_resource type="Script" path="res://Scripts/End.gd" id="1_oj4yg"]
 [ext_resource type="LabelSettings" uid="uid://cql7mn643wepi" path="res://Font/end_labels.tres" id="1_u8688"]
 [ext_resource type="Texture2D" uid="uid://ct0kbwfrwn5ja" path="res://Textures/circle_pink.png" id="3_gnd3o"]
 [ext_resource type="Texture2D" uid="uid://emqknvl088xg" path="res://Textures/arrow_blue.png" id="4_63kic"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_pv5u0"]
+font_size = 75
+outline_size = 9
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_4xbvm"]
+font_size = 75
+outline_size = 9
+outline_color = Color(0, 0, 0, 1)
 
 [node name="End" type="Node2D"]
 script = ExtResource("1_oj4yg")
@@ -88,5 +98,20 @@ texture = ExtResource("4_63kic")
 [node name="Timer" type="Timer" parent="."]
 wait_time = 3.0
 one_shot = true
+
+[node name="playkey" type="Label" parent="."]
+offset_left = 366.0
+offset_top = 423.0
+offset_right = 421.0
+offset_bottom = 526.0
+label_settings = SubResource("LabelSettings_pv5u0")
+
+[node name="menukey" type="Label" parent="."]
+offset_left = 813.0
+offset_top = 446.0
+offset_right = 868.0
+offset_bottom = 549.0
+label_settings = SubResource("LabelSettings_4xbvm")
+horizontal_alignment = 1
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

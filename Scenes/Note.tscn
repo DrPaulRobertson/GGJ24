@@ -53,6 +53,8 @@ font_size = 45
 
 [sub_resource type="LabelSettings" id="LabelSettings_rj2kx"]
 font_size = 38
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
 
 [node name="Note" type="Area2D" groups=["note"]]
 script = ExtResource("1_c3fyj")
@@ -97,11 +99,12 @@ offset_bottom = 12.0
 label_settings = SubResource("LabelSettings_ihecc")
 
 [node name="Key" type="Label" parent="."]
-offset_left = -17.0
-offset_top = -28.0
-offset_right = 23.0
-offset_bottom = 25.0
+offset_left = -19.0
+offset_top = -27.0
+offset_right = 21.0
+offset_bottom = 26.0
 label_settings = SubResource("LabelSettings_rj2kx")
 horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
