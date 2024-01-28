@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://c3al4vofown1v"]
+[gd_scene load_steps=14 format=3 uid="uid://c3al4vofown1v"]
 
 [ext_resource type="Script" path="res://Scripts/Note.gd" id="1_c3fyj"]
 [ext_resource type="Texture2D" uid="uid://ct0kbwfrwn5ja" path="res://Textures/circle_pink.png" id="2_54gad"]
@@ -51,6 +51,9 @@ colors = PackedColorArray(1, 0, 1, 1, 0.838723, 1.16476e-05, 0.553025, 0.25098)
 [sub_resource type="LabelSettings" id="LabelSettings_ihecc"]
 font_size = 45
 
+[sub_resource type="LabelSettings" id="LabelSettings_rj2kx"]
+font_size = 38
+
 [node name="Note" type="Area2D" groups=["note"]]
 script = ExtResource("1_c3fyj")
 
@@ -92,5 +95,13 @@ offset_top = -11.0
 offset_right = 20.0
 offset_bottom = 12.0
 label_settings = SubResource("LabelSettings_ihecc")
+
+[node name="Key" type="Label" parent="."]
+offset_left = -17.0
+offset_top = -28.0
+offset_right = 23.0
+offset_bottom = 25.0
+label_settings = SubResource("LabelSettings_rj2kx")
+horizontal_alignment = 1
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

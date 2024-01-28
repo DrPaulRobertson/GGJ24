@@ -17,3 +17,11 @@ func _process(delta):
 func _on_HSlider_value_changed(value):
 	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"),
 								linear_to_db(value))
+
+
+func _on_check_button_toggled(toggled_on):
+	Global.use_keys = toggled_on
+	if Global.use_keys:
+		$startkey.text = "D"
+	else:
+		$startkey.text = ""

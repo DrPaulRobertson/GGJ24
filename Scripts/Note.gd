@@ -31,18 +31,28 @@ func initialize(lane):
 	if lane == 0:
 		$AnimatedSprite.frame = 1
 		position = TOP_LANE_SPAWN
+		if Global.use_keys:
+			$Key.text = "I"
 	elif lane == 1:
 		$AnimatedSprite.frame = 2
 		position = SECOND_LANE_SPAWN
+		if Global.use_keys:
+			$Key.text = "L"
 	elif lane == 2:
 		$AnimatedSprite.frame = 4
 		position = SECOND_LANE_SPAWN
+		if Global.use_keys:
+			$Key.text = "J"
 	elif lane == 3:
 		$AnimatedSprite.frame = 3
 		position = THIRD_LANE_SPAWN
+		if Global.use_keys:
+			$Key.text = "K"
 	elif lane == 4:
 		$AnimatedSprite.frame = 0
 		position = BOTTOM_LANE_SPAWN
+		if Global.use_keys:
+			$Key.text = "D"
 	else:
 		printerr("Invalid lane set for note: " + str(lane))
 		return
