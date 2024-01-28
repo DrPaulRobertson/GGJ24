@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://2rbl5klangyo"]
+[gd_scene load_steps=4 format=3 uid="uid://2rbl5klangyo"]
 
 [ext_resource type="PackedScene" uid="uid://74j6laii87fw" path="res://Scenes/sm_king.tscn" id="1_34ova"]
+[ext_resource type="Script" path="res://Scripts/main.gd" id="1_ty571"]
 [ext_resource type="Texture2D" uid="uid://dihoyk17fvvxj" path="res://Textures/throne_background.png" id="2_02shw"]
 
 [node name="Node3D" type="Node3D"]
+script = ExtResource("1_ty571")
 
 [node name="dude" type="CSGSphere3D" parent="."]
 visible = false
@@ -11,8 +13,15 @@ visible = false
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.961112, 0.276157, 0, -0.276157, 0.961112, 0, 0.643907, 0.605597)
 
+[node name="Camera3D2" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.895549, 0.444963, 0, -0.444963, 0.895549, 0, 0.793189, 0.530567)
+
 [node name="SM_King2" parent="." instance=ExtResource("1_34ova")]
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.67577, -4.86467)
+texture = ExtResource("2_02shw")
+
+[node name="Sprite3D2" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.922753, 0.385391, 0, -0.385391, 0.922753, 0, -1.67577, -4.86467)
 texture = ExtResource("2_02shw")

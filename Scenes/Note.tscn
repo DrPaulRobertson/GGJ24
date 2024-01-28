@@ -46,7 +46,7 @@ point_count = 2
 
 [sub_resource type="Gradient" id="Gradient_dith4"]
 offsets = PackedFloat32Array(0.527273, 1)
-colors = PackedColorArray(1, 0, 1, 1, 0.838723, 1.16476e-05, 0.553025, 0.25098)
+colors = PackedColorArray(1, 0.83371, 0.988416, 1, 0.838723, 1.16476e-05, 0.553025, 0.25098)
 
 [sub_resource type="LabelSettings" id="LabelSettings_ihecc"]
 font_size = 45
@@ -77,14 +77,14 @@ emission_sphere_radius = 1.0
 direction = Vector2(0, 0)
 spread = 180.0
 gravity = Vector2(0, 0)
-initial_velocity_min = 55.0
-initial_velocity_max = 55.0
+initial_velocity_min = 118.34
+initial_velocity_max = 207.54
 angle_max = 360.0
 angle_curve = SubResource("Curve_yet61")
-scale_amount_min = 1.5
-scale_amount_max = 2.5
+scale_amount_min = 16.0
+scale_amount_max = 16.0
 scale_amount_curve = SubResource("Curve_4lrts")
-color = Color(1, 0.494118, 0.882353, 1)
+color = Color(1, 0.94902, 0.984314, 1)
 color_ramp = SubResource("Gradient_dith4")
 
 [node name="Timer" type="Timer" parent="."]
