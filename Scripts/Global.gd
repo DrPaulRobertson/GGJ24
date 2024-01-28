@@ -8,6 +8,7 @@ var good = 0
 var okay = 0
 var missed = 0
 var grade = "NA"
+var use_keys = false
 
 
 func set_score(new):

@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://2rbl5klangyo" path="res://Scenes/main.tscn" id="2_rnwo7"]
 [ext_resource type="Texture2D" uid="uid://i81o0g2787sp" path="res://Textures/road.png" id="3_xyb83"]
 [ext_resource type="Texture2D" uid="uid://clart6aoauanf" path="res://Textures/hit_area.png" id="4_3iqqb"]
-[ext_resource type="Texture2D" uid="uid://iwc1pyqm6wh2" path="res://Textures/royal_stave_grad.png" id="4_c7f7o"]
+[ext_resource type="Texture2D" uid="uid://cvki1gmpgahri" path="res://Textures/royal_stave_grad.png" id="4_c7f7o"]
 [ext_resource type="AudioStream" uid="uid://jmvluhotii4s" path="res://Sounds/Head-Shoulders-Knees-And-Toes.ogg" id="5_7kck3"]
 [ext_resource type="FontFile" uid="uid://djfkx2kuy5gy8" path="res://Font/Strange Clowns.ttf" id="5_vuxko"]
 [ext_resource type="PackedScene" uid="uid://dgga7l6i0plij" path="res://Scenes/ArrowButton.tscn" id="7_yyoct"]
@@ -33,33 +33,38 @@ render_target_update_mode = 4
 [node name="Node3D" parent="SubViewportContainer/SubViewport" instance=ExtResource("2_rnwo7")]
 
 [node name="Road" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(650, 150)
 scale = Vector2(7.74194, 0.166667)
 texture = ExtResource("3_xyb83")
 
 [node name="Road2" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(647, 232)
 scale = Vector2(7.74194, 0.166667)
 texture = ExtResource("3_xyb83")
 
 [node name="Road3" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(649, 326)
 scale = Vector2(7.74194, 0.166667)
 texture = ExtResource("3_xyb83")
 
 [node name="Road4" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(656, 419)
 scale = Vector2(7.74194, 0.166667)
 texture = ExtResource("3_xyb83")
 
 [node name="Road5" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(655, 509)
 scale = Vector2(7.74194, 0.166667)
 texture = ExtResource("3_xyb83")
 
 [node name="Road6" type="Sprite2D" parent="."]
-position = Vector2(477.984, 329)
-scale = Vector2(1.22653, 1.67318)
+position = Vector2(289, 328)
+scale = Vector2(1.61813, 1.71094)
 texture = ExtResource("4_c7f7o")
 
 [node name="HitArea" type="Sprite2D" parent="."]
