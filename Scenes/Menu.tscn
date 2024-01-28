@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dbin07ov25h60"]
+[gd_scene load_steps=13 format=3 uid="uid://dbin07ov25h60"]
 
 [ext_resource type="Script" path="res://Scripts/Menu.gd" id="1_0t8nb"]
 [ext_resource type="Texture2D" uid="uid://hnq3qhbbxg1c" path="res://Textures/menu_background.png" id="2_cigrx"]
@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://ct0kbwfrwn5ja" path="res://Textures/circle_pink.png" id="4_52ou1"]
 [ext_resource type="FontFile" uid="uid://djfkx2kuy5gy8" path="res://Font/Strange Clowns.ttf" id="5_24p1c"]
 [ext_resource type="FontFile" uid="uid://c2b2upepojt64" path="res://Font/Morphelia.ttf" id="5_i6l03"]
+[ext_resource type="Texture2D" uid="uid://coueebu1s4rir" path="res://Textures/arrow_green.png" id="7_0qiq7"]
+[ext_resource type="LabelSettings" uid="uid://cql7mn643wepi" path="res://Font/end_labels.tres" id="8_73d3s"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_6sm76"]
 font = ExtResource("5_i6l03")
@@ -23,6 +25,11 @@ outline_size = 12
 [sub_resource type="LabelSettings" id="LabelSettings_opkjq"]
 font_size = 77
 outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_sefxi"]
+font_size = 45
+outline_size = 5
 outline_color = Color(0, 0, 0, 1)
 
 [node name="Menu" type="Node2D"]
@@ -90,6 +97,28 @@ offset_top = 452.0
 offset_right = 650.0
 offset_bottom = 558.0
 label_settings = SubResource("LabelSettings_opkjq")
+
+[node name="up" type="Sprite2D" parent="."]
+position = Vector2(115.806, 113.099)
+scale = Vector2(0.471483, 0.471483)
+texture = ExtResource("7_0qiq7")
+
+[node name="Menu" type="Label" parent="."]
+offset_left = 16.0
+offset_top = -12.0
+offset_right = 276.0
+offset_bottom = 94.0
+text = "Instructions
+"
+label_settings = ExtResource("8_73d3s")
+
+[node name="menukey" type="Label" parent="."]
+offset_left = 97.806
+offset_top = 75.0988
+offset_right = 137.806
+offset_bottom = 138.099
+label_settings = SubResource("LabelSettings_sefxi")
+horizontal_alignment = 1
 
 [connection signal="value_changed" from="HSlider" to="." method="_on_HSlider_value_changed"]
 [connection signal="toggled" from="CheckButton" to="." method="_on_check_button_toggled"]
