@@ -6,12 +6,34 @@ var okay = false
 var current_note = null
 
 @export var input = ""
+@export var sfx :Array[Resource] = []
 
+var audio_player = AudioStreamPlayer.new()
+var audio_stream_randomizer = AudioStreamRandomizer.new()
+var rng = RandomNumberGenerator.new()
+
+func _ready():
+	audio_player.volume_db = 1.0
+	add_child(audio_player)
+	# Assume 'sound1', 'sound2', etc. are preloaded AudioStream resources
+	#var items = sfx.get_items()
+	for index in sfx.size():
+		audio_stream_randomizer.add_stream(index, sfx[index])
+	#audio_stream_randomizer.add_audio_stream(sound1)
+	#audio_stream_randomizer.add_audio_stream(sound2)
+	#audio_stream_randomizer.add_audio_stream(sound3)
+
+func play_random_sound():
+	var my_random_number = rng.randi_range(0, sfx.size()-1)
+	var random_stream = audio_stream_randomizer.get_stream(my_random_number)
+	audio_player.stream = random_stream
+	audio_player.play()
 
 func _unhandled_input(event):
 	if event.is_action(input):
 		if event.is_action_pressed(input, false):
 			if current_note != null:
+				play_random_sound()
 				if perfect:
 					get_parent().increment_score(3)
 					current_note.destroy(3)

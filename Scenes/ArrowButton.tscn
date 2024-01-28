@@ -1,7 +1,39 @@
-[gd_scene load_steps=7 format=3 uid="uid://dgga7l6i0plij"]
+[gd_scene load_steps=39 format=3 uid="uid://dgga7l6i0plij"]
 
 [ext_resource type="Texture2D" uid="uid://ledt4yxo7bo6" path="res://Textures/trans.png" id="1_45oru"]
+[ext_resource type="AudioStream" uid="uid://c3l1w47jwsrm5" path="res://Sounds/laugh21.ogg" id="3_1cq0a"]
+[ext_resource type="AudioStream" uid="uid://bf7tvib775smx" path="res://Sounds/laugh_1.ogg" id="4_mjnri"]
+[ext_resource type="AudioStream" uid="uid://dij7itxj5hltp" path="res://Sounds/laugh_2.ogg" id="5_i65o3"]
+[ext_resource type="AudioStream" uid="uid://ckdaf0xy0ghu5" path="res://Sounds/laugh_3.ogg" id="6_ctoy6"]
 [ext_resource type="Script" path="res://Scripts/ArrowButton.gd" id="6_msu05"]
+[ext_resource type="AudioStream" uid="uid://bm52ppa3f0xry" path="res://Sounds/laugh_4.ogg" id="7_scx6x"]
+[ext_resource type="AudioStream" uid="uid://cgy3wj54yohwi" path="res://Sounds/laugh_5.ogg" id="8_ufyfk"]
+[ext_resource type="AudioStream" uid="uid://c38on32l50on2" path="res://Sounds/laugh_6.ogg" id="9_28lye"]
+[ext_resource type="AudioStream" uid="uid://s3ley23te1de" path="res://Sounds/laugh_7.ogg" id="10_4ojxg"]
+[ext_resource type="AudioStream" uid="uid://bna06t1118x8b" path="res://Sounds/laugh_8.ogg" id="11_3e8ik"]
+[ext_resource type="AudioStream" uid="uid://bchfu5bwhdq6x" path="res://Sounds/laugh_9.ogg" id="12_8t3bf"]
+[ext_resource type="AudioStream" uid="uid://d1kit3jt45e17" path="res://Sounds/laugh_10.ogg" id="13_drxfd"]
+[ext_resource type="AudioStream" uid="uid://c460lf0ymy34l" path="res://Sounds/laugh_12.ogg" id="14_or3n2"]
+[ext_resource type="AudioStream" uid="uid://b03k24cvb847s" path="res://Sounds/laugh_13.ogg" id="15_8j6kb"]
+[ext_resource type="AudioStream" uid="uid://cg014mh47g48w" path="res://Sounds/laugh_14.ogg" id="16_a3rbs"]
+[ext_resource type="AudioStream" uid="uid://cw7ne25vreul8" path="res://Sounds/laugh_15.ogg" id="17_rvcor"]
+[ext_resource type="AudioStream" uid="uid://dnayvrb0gm4ek" path="res://Sounds/laugh_16.ogg" id="18_gc7tt"]
+[ext_resource type="AudioStream" uid="uid://cefvvb0cs2miw" path="res://Sounds/laugh_17.ogg" id="19_ds7f3"]
+[ext_resource type="AudioStream" uid="uid://dw58gikq0754k" path="res://Sounds/laugh_18.ogg" id="20_mchl6"]
+[ext_resource type="AudioStream" uid="uid://bciy86rtxuxlt" path="res://Sounds/laugh_19.ogg" id="21_f1if7"]
+[ext_resource type="AudioStream" uid="uid://ckxjyc2jieery" path="res://Sounds/laugh_20.ogg" id="22_wfqlr"]
+[ext_resource type="AudioStream" uid="uid://ru2txjere1we" path="res://Sounds/laugh_22.ogg" id="23_bchux"]
+[ext_resource type="AudioStream" uid="uid://cvccavgne40yj" path="res://Sounds/laugh_23.ogg" id="24_ogpbm"]
+[ext_resource type="AudioStream" uid="uid://ihlhmkx046as" path="res://Sounds/laugh_24.ogg" id="25_1svm7"]
+[ext_resource type="AudioStream" uid="uid://blrqigkmpfcmw" path="res://Sounds/laugh_25.ogg" id="26_suq0m"]
+[ext_resource type="AudioStream" uid="uid://6bckrrmgdh80" path="res://Sounds/laugh_26.ogg" id="27_3tusy"]
+[ext_resource type="AudioStream" uid="uid://dofraduyfj3r3" path="res://Sounds/laugh_27.ogg" id="28_retr7"]
+[ext_resource type="AudioStream" uid="uid://dkcrorbkvfje" path="res://Sounds/laugh_28.ogg" id="29_wpadt"]
+[ext_resource type="AudioStream" uid="uid://c8vjjpii4v6e2" path="res://Sounds/laugh_29.ogg" id="30_4nvgy"]
+[ext_resource type="AudioStream" uid="uid://baqbexb805vp" path="res://Sounds/laugh_30.ogg" id="31_qerix"]
+[ext_resource type="AudioStream" uid="uid://bikdpvt5ps8g6" path="res://Sounds/laugh_31.ogg" id="32_kdgyp"]
+[ext_resource type="AudioStream" uid="uid://bf47b356yu0kd" path="res://Sounds/laugh_33.ogg" id="33_u4ly6"]
+[ext_resource type="AudioStream" uid="uid://b4k1vjxd58jfr" path="res://Sounds/lauhg_11.ogg" id="34_4kbnu"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_52r8m"]
 animations = [{
@@ -27,6 +59,7 @@ size = Vector2(20, 63.5)
 scale = Vector2(10, 10)
 sprite_frames = SubResource("SpriteFrames_52r8m")
 script = ExtResource("6_msu05")
+sfx = Array[Resource]([ExtResource("3_1cq0a"), ExtResource("4_mjnri"), ExtResource("5_i65o3"), ExtResource("6_ctoy6"), ExtResource("7_scx6x"), ExtResource("8_ufyfk"), ExtResource("9_28lye"), ExtResource("10_4ojxg"), ExtResource("11_3e8ik"), ExtResource("12_8t3bf"), ExtResource("13_drxfd"), ExtResource("14_or3n2"), ExtResource("15_8j6kb"), ExtResource("16_a3rbs"), ExtResource("17_rvcor"), ExtResource("18_gc7tt"), ExtResource("19_ds7f3"), ExtResource("20_mchl6"), ExtResource("21_f1if7"), ExtResource("22_wfqlr"), ExtResource("23_bchux"), ExtResource("24_ogpbm"), ExtResource("25_1svm7"), ExtResource("26_suq0m"), ExtResource("27_3tusy"), ExtResource("28_retr7"), ExtResource("29_wpadt"), ExtResource("30_4nvgy"), ExtResource("31_qerix"), ExtResource("32_kdgyp"), ExtResource("33_u4ly6"), ExtResource("34_4kbnu")])
 
 [node name="PerfectArea" type="Area2D" parent="."]
 

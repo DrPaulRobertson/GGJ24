@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://2hdkms8vwr70"]
+[gd_scene load_steps=12 format=3 uid="uid://2hdkms8vwr70"]
 
 [ext_resource type="Script" path="res://Scripts/Game.gd" id="1_6edh2"]
 [ext_resource type="PackedScene" uid="uid://g32jg44fkyir" path="res://Scenes/Conductor_node.tscn" id="2_abomd"]
 [ext_resource type="PackedScene" uid="uid://2rbl5klangyo" path="res://Scenes/main.tscn" id="2_rnwo7"]
 [ext_resource type="Texture2D" uid="uid://i81o0g2787sp" path="res://Textures/road.png" id="3_xyb83"]
 [ext_resource type="Texture2D" uid="uid://clart6aoauanf" path="res://Textures/hit_area.png" id="4_3iqqb"]
+[ext_resource type="Texture2D" uid="uid://iwc1pyqm6wh2" path="res://Textures/royal_stave_grad.png" id="4_c7f7o"]
 [ext_resource type="AudioStream" uid="uid://jmvluhotii4s" path="res://Sounds/Head-Shoulders-Knees-And-Toes.ogg" id="5_7kck3"]
 [ext_resource type="FontFile" uid="uid://djfkx2kuy5gy8" path="res://Font/Strange Clowns.ttf" id="5_vuxko"]
 [ext_resource type="PackedScene" uid="uid://dgga7l6i0plij" path="res://Scenes/ArrowButton.tscn" id="7_yyoct"]
@@ -56,6 +57,11 @@ position = Vector2(655, 509)
 scale = Vector2(7.74194, 0.166667)
 texture = ExtResource("3_xyb83")
 
+[node name="Road6" type="Sprite2D" parent="."]
+position = Vector2(477.984, 329)
+scale = Vector2(1.22653, 1.67318)
+texture = ExtResource("4_c7f7o")
+
 [node name="HitArea" type="Sprite2D" parent="."]
 position = Vector2(1055, 326)
 scale = Vector2(0.0887097, 20.5)
@@ -70,12 +76,13 @@ text = "0"
 label_settings = SubResource("LabelSettings_clt7u")
 
 [node name="Combo" type="Label" parent="."]
-offset_left = 29.0
-offset_top = 73.0
-offset_right = 259.0
-offset_bottom = 141.0
+offset_left = 909.0
+offset_top = 10.0
+offset_right = 1139.0
+offset_bottom = 78.0
 text = "0x combo!"
 label_settings = SubResource("LabelSettings_lej24")
+horizontal_alignment = 2
 
 [node name="Conductor" parent="." instance=ExtResource("2_abomd")]
 stream = ExtResource("5_7kck3")
